@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jkaho/jkaho.github.io/issues"
   },
-  "homepage": "https://github.com/jkaho/jkaho.github.io#readme"
+  "homepage": "https://github.com/jkaho/jkaho.github.io#readme",
+  "dependencies": {
+    "@sajari/sdk-js": "^2.0.0-rc.2"
+  }
 }
