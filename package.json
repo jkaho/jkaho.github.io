@@ -1,0 +1,19 @@
+{
+  "name": "animal-search",
+  "version": "1.0.0",
+  "description": "Sajari website search implementation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkaho/jkaho.github.io.git"
+  },
+  "author": "jkaho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jkaho/jkaho.github.io/issues"
+  },
+  "homepage": "https://github.com/jkaho/jkaho.github.io#readme"
+}
