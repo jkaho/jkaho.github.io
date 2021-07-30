@@ -4,57 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="This site is about animals." /> 
-  <link href="style.css" rel="stylesheet" />
-  <title>Website Search</title>
+  <title>Document</title>
 </head>
 <body>
-  <nav>
-    <div id="nav-container">
-      <div id="title" class="nav-div">
-        <h1>Animals</h1>
-      </div>
-      <div id="nav-links" class="nav-div">
-        <a href="index.html">Home</a>
-        <a href="dogs.html">Dogs</a>
-        <a href="cats.html">Cats</a>
-        <a href="birds.html">Birds</a>
-      </div>
-    </div>
-  </nav>
-  <div data-widget="search-input">
+  <div data-widget="search-results">
     <script type="application/json">
       {
         "account": "1627439095818242237",
         "collection": "sajari-com",
-        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
-        "pipeline": "website",
-        "preset": "website",
-        "variables": {},
-        "mode": "suggestions",
-        "redirect": {
-          "url": "https://jkaho.github.io/results"
-        },
-        "theme": {
-          "color": {
-            "primary": {
-              "base": "#e619af",
-              "text": "#ffffff",
-              "active": "#2d64be"
-            }
-          }
-        }
-      }
-    </script>
-    <noscript>This page requires JavaScript</noscript>
-  </div>
-  <script async src="https://cdn.sajari.com/embed/1/loader.js"></script>
-  <a href="/search">Search this site</a>
-  <div data-widget="overlay">
-    <script type="application/json">
-      {
-        "account": "1627439095818242237",
-        "collection": "animal-search",
         "endpoint": "//jsonapi-us-valkyrie.sajari.net",
         "pipeline": "website",
         "preset": "website",
@@ -92,16 +49,14 @@
           "input": {
             "hide": false,
             "position": "aside"
-          },
-          "mode": "overlay",
-          "buttonSelector": "a[href='/search']"
+          }
         },
         "theme": {
           "color": {
             "primary": {
-              "base": "#667eea",
+              "base": "#e619af",
               "text": "#ffffff",
-              "active": "#5a67d8"
+              "active": "#2d64be"
             }
           }
         }
@@ -109,6 +64,5 @@
     </script>
     <noscript>This page requires JavaScript</noscript>
   </div>
-  <script async src="https://cdn.sajari.com/embed/1/loader.js"></script>
 </body>
 </html>
