@@ -31,3 +31,10 @@ import { Client, DefaultSession, TrackingType, InteractiveSession } from "@sajar
       console.log(error)
     });
 
+    // most primitive layer between the frontend and backend 
+    // hand sdk your account id and pipeline id in wrapper object
+    // ask the wrapper to submit a search to the backend
+    // customer would have to be an engineer to use it 
+    // some customers use vue 
+    // there's a pipeline class 
+    // react hooks is confusing > 
