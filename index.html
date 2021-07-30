@@ -9,92 +9,18 @@
   <title>Website Search</title>
 </head>
 <body>
-  <nav>
-    <div id="nav-container">
-      <div id="title" class="nav-div">
-        <h1>Animals</h1>
-      </div>
-      <div id="nav-links" class="nav-div">
-        <a href="index.html">Home</a>
-        <a href="dogs.html">Dogs</a>
-        <a href="cats.html">Cats</a>
-        <a href="birds.html">Birds</a>
-      </div>
-    </div>
-  </nav>
-  <a href="/search">Search this site</a>
-  <div data-widget="overlay">
-    <script type="application/json">
-      {
-        "account": "1627439095818242237",
-        "collection": "animal-search",
-        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
-        "pipeline": "website",
-        "preset": "website",
-        "variables": {},
-        "filters": [],
-        "options": {
-          "sorting": {
-            "options": [
-              {
-                "name": "Most relevant",
-                "value": ""
-              },
-              {
-                "name": "Alphabetical: A to Z",
-                "value": "title"
-              },
-              {
-                "name": "Alphabetical: Z to A",
-                "value": "-title"
-              },
-              {
-                "name": "Date: Oldest to Newest",
-                "value": "created_at"
-              },
-              {
-                "name": "Date: Newest to Oldest",
-                "value": "-created_at"
-              }
-            ]
-          },
-          "results": {
-            "viewType": "list",
-            "showImage": false
-          },
-          "input": {
-            "hide": false,
-            "position": "aside"
-          },
-          "mode": "overlay",
-          "buttonSelector": "a[href='/search']"
-        },
-        "theme": {
-          "color": {
-            "primary": {
-              "base": "#667eea",
-              "text": "#ffffff",
-              "active": "#5a67d8"
-            }
-          }
-        }
-      }
-    </script>
-    <noscript>This page requires JavaScript</noscript>
-  </div>
   <div data-widget="search-input">
     <script type="application/json">
       {
         "account": "1627439095818242237",
-        "collection": "animal-search",
+        "collection": "jollyes-products",
         "endpoint": "//jsonapi-us-valkyrie.sajari.net",
-        "pipeline": "website",
-        "preset": "website",
+        "pipeline": "app",
+        "preset": "app",
         "variables": {},
         "mode": "suggestions",
         "redirect": {
-          "url": "results.html",
-          "queryParamName": "q"
+          "url": "/results.html"
         },
         "theme": {
           "color": {

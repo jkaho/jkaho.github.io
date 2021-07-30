@@ -7,27 +7,14 @@
   <title>Document</title>
 </head>
 <body>
-  <nav>
-    <div id="nav-container">
-      <div id="title" class="nav-div">
-        <h1>Animals</h1>
-      </div>
-      <div id="nav-links" class="nav-div">
-        <a href="index.html">Home</a>
-        <a href="dogs.html">Dogs</a>
-        <a href="cats.html">Cats</a>
-        <a href="birds.html">Birds</a>
-      </div>
-    </div>
-  </nav>
-  <!-- <div data-widget="search-results">
+  <div data-widget="search-results">
     <script type="application/json">
       {
         "account": "1627439095818242237",
-        "collection": "animal-search",
+        "collection": "jollyes-products",
         "endpoint": "//jsonapi-us-valkyrie.sajari.net",
-        "pipeline": "query",
-        "preset": "website",
+        "pipeline": "app",
+        "preset": "app",
         "variables": {},
         "filters": [],
         "options": {
@@ -39,29 +26,28 @@
               },
               {
                 "name": "Alphabetical: A to Z",
-                "value": "title"
+                "value": "name"
               },
               {
                 "name": "Alphabetical: Z to A",
-                "value": "-title"
-              },
-              {
-                "name": "Date: Oldest to Newest",
-                "value": "created_at"
-              },
-              {
-                "name": "Date: Newest to Oldest",
-                "value": "-created_at"
+                "value": "-name"
               }
             ]
           },
           "results": {
             "viewType": "list",
-            "showImage": false
+            "imageAspectRatio": {
+              "grid": 0.563,
+              "list": 1
+            },
+            "imageObjectFit": {
+              "grid": "cover",
+              "list": "cover"
+            }
           },
           "input": {
             "hide": false,
-            "position": "aside"
+            "position": "top"
           }
         },
         "theme": {
@@ -72,21 +58,19 @@
               "active": "#5a67d8"
             }
           }
+        },
+        "fields": {
+          "title": "name",
+          "subtitle": "category",
+          "url": "url",
+          "image": "image",
+          "rating": "attribute_rating",
+          "description": "attribute_description",
+          "price": "price"
         }
       }
     </script>
     <noscript>This page requires JavaScript</noscript>
-  </div> -->
-  <div data-widget="search-results">
-    <script type="application/json">
-      {
-        "account": "1627439095818242237",
-        "collection": "animal-search",
-        "pipeline": "website",
-        "options": { "input": { "hide": true } },
-        "filters": []
-      }
-    </script>
   </div>
 </body>
 </html>
