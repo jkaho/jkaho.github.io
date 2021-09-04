@@ -72,7 +72,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	rootTemplate.Execute(w, listenAddr)
 }
 
-var rootTemplate = template.Must(template.ParseFiles("../public/index.html"))
+var rootTemplate = template.Must(template.ParseFiles("index.html"))
 
 // func rootHandler(w http.ResponseWriter, r *http.Request) {
 // 	rootTemplate.Execute(w, listenAddr)
