@@ -1,138 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8" />
-	<title>Go chat</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-	<style>
-		body {
-			box-sizing: border-box;
-			font-family: Arial, Helvetica, sans-serif;
-			padding: 20px;
-		}
-    #waitBox {
-      text-align: center;
-      margin: 50px auto;
-      color: rgb(228, 140, 154);
-      font-weight: bolder;
-      font-size: 20px;
-      width: 350px;
-    }
-		#msgFormDiv {
-			position: fixed;
-			bottom: 20px;
-			padding: 10px;
-			width: 90%;
-			border: 1px solid rgb(182, 90, 105);
-			border-radius: 40px;
-		}
-		#msgForm {
-			display: flex;
-		}
-		#msgBar {
-			border: none;
-			flex: 1;
-		}
-		#msgBar:focus {
-			outline: none;
-		}
-		#msgSend {
-			background: pink;
-			color: white;
-			padding: 10px;
-			border-radius: 100%;
-			border: none;
-			margin-left: 5px;
-      cursor: pointer;
-		}
-		#chatBoxOuter {
-			display: none;
-		}
-		#chatBox {
-			height: 400px;
-			overflow: auto;
-		}
-		.msgLine {
-			width: 100%;
-			padding: 20px 0;
-		}
-		.msgBubble {
-			padding: 5px 10px;
-			border-radius: 10px;
-		}
-		.myMsgInner {
-			float: right;
-			background: pink;
-		}
-		.theirMsgInner {
-			float: left;
-			background: rgb(250, 250, 250);
-		}
-    .closeMsg {
-      float: left;
-    }
-	</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This site is about animals." /> 
+  <link href="style.css" rel="stylesheet" />
+  <title>Jollyes Products</title>
 </head>
 <body>
-<!-- Waiting screen-->
-<div id="waitBox"><p id="serverMsg">Waiting for a chat partner...</p></div>
-<!-- Chat screen -->
-<div id="chatBoxOuter">
-	<div id="chatBox"></div>
-	<div id="msgFormDiv">
-		<form id="msgForm">
-				<input id="msgBar" type="text" placeholder="Start typing here..."/>
-				<button id="msgSend"><i class="fas fa-paper-plane"></i></button>
-		</form>
-	</div>
-</div>
-<script defer>
-  websocket = new WebSocket("ws://{{.}}/socket");
-	websocket.addEventListener("message", function(e) {
-		const msg = e.data;
-    if (msg === "Waiting for a partner...") {
-      return;
-    }
-		if (msg === "Found one! Say hi.\n") {
-			document.getElementById("waitBox").style.display = "none";
-			document.getElementById("chatBoxOuter").style.display = "block";
-			return;
-		}
-		const theirMsg = document.createElement("div");
-		theirMsg.classList.add("msgLine");
-		const theirMsgInner = document.createElement("div");
-		theirMsgInner.classList.add("theirMsgInner", "msgBubble");
-		theirMsgInner.textContent = msg;
-		theirMsg.appendChild(theirMsgInner);
-		document.getElementById("chatBox").appendChild(theirMsg);
-	});
-
-	websocket.addEventListener("close", function(e) {
-		console.log("Connection has closed");
-		const closeMsg = document.createElement("div");
-    closeMsg.classList.add("msgLine");
-    const closeMsgInner = document.createElement("div");
-    closeMsgInner.classList.add("closeMsg", "msgBubble");
-		closeMsgInner.textContent = "Your partner has left the chat.";
-    closeMsg.appendChild(closeMsgInner);
-		document.getElementById("chatBox").appendChild(closeMsg);
-	});
-
-  document.getElementById("msgForm").addEventListener("submit", function(e) {
-		e.preventDefault();
-		const msg = document.getElementById("msgBar").value;
-		websocket.send(msg);
-		const myMsg = document.createElement("div");
-		myMsg.classList.add("msgLine");
-		const myMsgInner = document.createElement("div");
-		myMsgInner.classList.add("myMsgInner");
-		myMsgInner.classList.add("msgBubble");
-		myMsgInner.textContent = msg;
-		myMsg.appendChild(myMsgInner);
-		document.getElementById("chatBox").appendChild(myMsg);
-		document.getElementById("msgBar").value = "";
-	});
-</script>
+  <h1>
+    <a href="index.html">Jollyes Product Search</a>
+  </h1>
+  <div data-widget="search-input">
+    <script type="application/json">
+      {
+        "account": "1627439095818242237",
+        "collection": "jollyes-products",
+        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
+        "pipeline": "app",
+        "preset": "app",
+        "variables": {},
+        "mode": "suggestions",
+        "redirect": {
+          "url": "/results.html",
+          "queryParamName": "q"
+        },
+        "theme": {
+          "color": {
+            "primary": {
+              "base": "#667eea",
+              "text": "#ffffff",
+              "active": "#5a67d8"
+            }
+          }
+        }
+      }
+    </script>
+    <noscript>This page requires JavaScript</noscript>
+  </div>
+  <!-- <div data-widget="search-results">
+    <script type="application/json">
+      {
+        "account": "1627439095818242237",
+        "collection": "jollyes-products",
+        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
+        "pipeline": "app",
+        "preset": "app",
+        "variables": {},
+        "filters": [],
+        "options": {
+          "sorting": {
+            "options": [
+              {
+                "name": "Most relevant",
+                "value": ""
+              },
+              {
+                "name": "Alphabetical: A to Z",
+                "value": "name"
+              },
+              {
+                "name": "Alphabetical: Z to A",
+                "value": "-name"
+              }
+            ]
+          },
+          "results": {
+            "viewType": "list",
+            "imageAspectRatio": {
+              "grid": 0.563,
+              "list": 1
+            },
+            "imageObjectFit": {
+              "grid": "cover",
+              "list": "cover"
+            }
+          },
+          "input": {
+            "hide": false,
+            "position": "top"
+          }
+        },
+        "theme": {
+          "color": {
+            "primary": {
+              "base": "#667eea",
+              "text": "#ffffff",
+              "active": "#5a67d8"
+            }
+          }
+        },
+        "fields": {
+          "title": "name",
+          "subtitle": "category",
+          "url": "url",
+          "image": "image",
+          "rating": "attribute_rating",
+          "description": "attribute_description",
+          "price": "price"
+        }
+      }
+    </script>
+    <noscript>This page requires JavaScript</noscript>
+  </div> -->
+  <script async src="https://cdn.sajari.com/embed/1/loader.js"></script>
 </body>
 </html>
