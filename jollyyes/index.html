@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This site is about animals." /> 
+  <link href="style.css" rel="stylesheet" />
+  <title>Jollyes Products</title>
+</head>
+<body>
+  <h1>
+    <a href="index.html">Jollyes Product Search</a>
+  </h1>
+  <div data-widget="search-input">
+    <script type="application/json">
+      {
+        "account": "1627439095818242237",
+        "collection": "jollyes-products",
+        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
+        "pipeline": "app",
+        "preset": "app",
+        "variables": {},
+        "mode": "suggestions",
+        "redirect": {
+          "url": "/results.html",
+          "queryParamName": "q"
+        },
+        "theme": {
+          "color": {
+            "primary": {
+              "base": "#667eea",
+              "text": "#ffffff",
+              "active": "#5a67d8"
+            }
+          }
+        }
+      }
+    </script>
+    <noscript>This page requires JavaScript</noscript>
+  </div>
+  <!-- <div data-widget="search-results">
+    <script type="application/json">
+      {
+        "account": "1627439095818242237",
+        "collection": "jollyes-products",
+        "endpoint": "//jsonapi-us-valkyrie.sajari.net",
+        "pipeline": "app",
+        "preset": "app",
+        "variables": {},
+        "filters": [],
+        "options": {
+          "sorting": {
+            "options": [
+              {
+                "name": "Most relevant",
+                "value": ""
+              },
+              {
+                "name": "Alphabetical: A to Z",
+                "value": "name"
+              },
+              {
+                "name": "Alphabetical: Z to A",
+                "value": "-name"
+              }
+            ]
+          },
+          "results": {
+            "viewType": "list",
+            "imageAspectRatio": {
+              "grid": 0.563,
+              "list": 1
+            },
+            "imageObjectFit": {
+              "grid": "cover",
+              "list": "cover"
+            }
+          },
+          "input": {
+            "hide": false,
+            "position": "top"
+          }
+        },
+        "theme": {
+          "color": {
+            "primary": {
+              "base": "#667eea",
+              "text": "#ffffff",
+              "active": "#5a67d8"
+            }
+          }
+        },
+        "fields": {
+          "title": "name",
+          "subtitle": "category",
+          "url": "url",
+          "image": "image",
+          "rating": "attribute_rating",
+          "description": "attribute_description",
+          "price": "price"
+        }
+      }
+    </script>
+    <noscript>This page requires JavaScript</noscript>
+  </div> -->
+  <script async src="https://cdn.sajari.com/embed/1/loader.js"></script>
+</body>
+</html>
