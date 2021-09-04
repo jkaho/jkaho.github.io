@@ -40,12 +40,12 @@ func match(c io.ReadWriteCloser) {
 	}
 }
 
-const listenAddr = "localhost:4000"
+const listenAddr = "jkaho.github.io"
 
 func main() {
 	http.HandleFunc("/", rootHandler)
 	http.Handle("/socket", websocket.Handler(socketHandler))
-	log.Println("http server running at: localhost:4000")
+	log.Println("http server running at: jkaho.github.io")
 	err := http.ListenAndServe(listenAddr, nil)
 	if err != nil {
 		log.Fatal(err)
