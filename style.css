@@ -18,6 +18,11 @@ a {
   text-decoration: none;
 }
 
+.button-div {
+  text-align: center;
+  margin: 4rem;
+}
+
 #search {
   border-radius: 10rem;
   border: none;
