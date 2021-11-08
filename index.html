@@ -39,6 +39,7 @@
     </script>
     <noscript>This page requires JavaScript</noscript>
   </div> -->
+  <button id="search">Search</button>
   <div data-widget="search-results">
     <script type="application/json">
       {
@@ -47,10 +48,11 @@
         "endpoint": "//jsonapi-us-valkyrie.sajari.net",
         "pipeline": "app",
         "preset": "app",
-        "mode": "overlay",
         "variables": {},
         "filters": [],
         "options": {
+          "mode": "overlay",
+          "buttonSelector": "#search",
           "sorting": {
             "options": [
               {
