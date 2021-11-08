@@ -29,3 +29,31 @@ a {
 #search:hover {
   background-color: rgb(228, 227, 227);
 }
+
+.placeholder-div {
+  height: 20rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: 3px solid black;
+  margin: 10px 0;
+}
+
+#pink {
+  background: pink;
+}
+
+#green {
+  background: green;
+}
+
+#blue {
+  background: blue;
+}
+
+#purple {
+  background: purple;
+}
+
+#orange {
+  background: orange;
+}
